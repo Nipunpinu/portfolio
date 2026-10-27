@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================================================
+       HEADER / CONTACT INFO
+       =================================================== -->
+  <header class="header">
+    <!-- Left: Personal Details -->
+    <div class="header-info">
+      <h1 class="full-name">Your Full Name</h1>
+      <p class="tagline">Aspiring Developer &amp; Lifelong Learner</p>
+      <ul class="details-list">
+        <li>
+          <span class="label">Age:</span>
+          <span class="value">18</span>
+        </li>
+        <li>
+          <span class="label">Phone:</span>
+          <span class="value">+91 98765 43210</span>
+        </li>
+        <li>
+          <span class="label">Email:</span>
+          <span class="value">
+            <a href="mailto:yourname@email.com">yourname@email.com</a>
+          </span>
+        </li>
+        <li>
+          <span class="label">Address:</span>
+          <span class="value">123, Your Street, City, State – 000000</span>
+        </li>
+        <li>
+          <span class="label">LinkedIn:</span>
+          <span class="value">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+          </span>
+        </li>
+        <li>
+          <span class="label">GitHub:</span>
+          <span class="value">
+            <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Passport Photo -->
+    <div class="header-photo">
+      <!--
+        Replace "photo.jpg" with your actual photo file name.
+        Place your photo in the same folder as this HTML file.
+      -->
+      <img
+        src="photo.jpg"
+        alt="Profile Photo"
+        class="passport-photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <!-- Placeholder shown when no photo is found -->
+      <div class="photo-placeholder">
+        <span>Your<br/>Photo</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================
+       ABOUT ME
+       =================================================== -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+    <p class="about-text">
+      Hi! I'm a passionate and curious individual with a love for learning and building things.
+      I enjoy solving real-world problems through technology and creativity. Currently pursuing
+      my studies in Computer Science, I'm eager to grow and contribute to meaningful projects.
+      I believe that great software is built with both logic and empathy.
+    </p>
+  </section>
+
+  <!-- ===================================================
+       EDUCATION
+       =================================================== -->
+  <section class="section section-alt" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+          <p class="timeline-sub">Computer Science &amp; Engineering</p>
+          <p class="timeline-place">Your University Name, City</p>
+          <span class="timeline-year">2024 – Present</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Class XII – Science (PCM)</h3>
+          <p class="timeline-sub">Percentage: 92% &nbsp;|&nbsp; Board: CBSE</p>
+          <p class="timeline-place">Your School Name, City</p>
+          <span class="timeline-year">2022 – 2024</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Class X – CBSE</h3>
+          <p class="timeline-sub">Percentage: 95%</p>
+          <p class="timeline-place">Your School Name, City</p>
+          <span class="timeline-year">Passed 2022</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       SKILLS
+       =================================================== -->
+  <section class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="section-line"></div>
+    <div class="skills-grid">
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Languages</h3>
+        <ul class="skill-list">
+          <li class="skill-tag">Python</li>
+          <li class="skill-tag">C</li>
+          <li class="skill-tag">C++</li>
+          <li class="skill-tag">JavaScript</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Web Dev</h3>
+        <ul class="skill-list">
+          <li class="skill-tag">HTML5</li>
+          <li class="skill-tag">CSS3</li>
+          <li class="skill-tag">React</li>
+          <li class="skill-tag">Node.js</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Tools</h3>
+        <ul class="skill-list">
+          <li class="skill-tag">Git &amp; GitHub</li>
+          <li class="skill-tag">VS Code</li>
+          <li class="skill-tag">Linux</li>
+          <li class="skill-tag">Figma</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-cat-title">Soft Skills</h3>
+        <ul class="skill-list">
+          <li class="skill-tag">Problem Solving</li>
+          <li class="skill-tag">Teamwork</li>
+          <li class="skill-tag">Communication</li>
+          <li class="skill-tag">Leadership</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       PROJECTS
+       =================================================== -->
+  <section class="section section-alt" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🌐</div>
+        <h3 class="project-title">Personal Portfolio Website</h3>
+        <p class="project-desc">
+          A clean, responsive portfolio website built with HTML and CSS to
+          showcase skills, education, and projects.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">HTML</span>
+          <span class="ptag">CSS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🧮</div>
+        <h3 class="project-title">Calculator App</h3>
+        <p class="project-desc">
+          A fully functional calculator with standard arithmetic operations,
+          built using Python with a Tkinter GUI.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Python</span>
+          <span class="ptag">Tkinter</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📋</div>
+        <h3 class="project-title">To-Do List App</h3>
+        <p class="project-desc">
+          A task management web app with add, edit, and delete functionality,
+          with data persistence using localStorage.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">JavaScript</span>
+          <span class="ptag">LocalStorage</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">📊</div>
+        <h3 class="project-title">Student Result Analyzer</h3>
+        <p class="project-desc">
+          A Python script that reads CSV result data, calculates grades,
+          and generates a summary report for each student.
+        </p>
+        <div class="project-tags">
+          <span class="ptag">Python</span>
+          <span class="ptag">CSV</span>
+          <span class="ptag">Pandas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       ACHIEVEMENTS
+       =================================================== -->
+  <section class="section" id="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="section-line"></div>
+    <ul class="achievements-list">
+      <li class="achievement-item">
+        <span class="ach-icon">🥇</span>
+        <div>
+          <strong>State-level Science Olympiad</strong> – Secured Rank 5 among 10,000+ participants
+        </div>
+      </li>
+      <li class="achievement-item">
+        <span class="ach-icon">💡</span>
+        <div>
+          <strong>Smart India Hackathon 2024</strong> – Participated and reached the semi-final round
+        </div>
+      </li>
+      <li class="achievement-item">
+        <span class="ach-icon">📐</span>
+        <div>
+          <strong>School Topper in Mathematics</strong> – Class XII Board Examinations
+        </div>
+      </li>
+      <li class="achievement-item">
+        <span class="ach-icon">📜</span>
+        <div>
+          <strong>Python Certification</strong> – Completed NPTEL / Coursera course with distinction
+        </div>
+      </li>
+      <li class="achievement-item">
+        <span class="ach-icon">🌟</span>
+        <div>
+          <strong>Open Source Contributor</strong> – Contributed to two beginner-friendly GitHub repositories
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===================================================
+       HOBBIES & INTERESTS
+       =================================================== -->
+  <section class="section section-alt" id="hobbies">
+    <h2 class="section-title">Hobbies &amp; Interests</h2>
+    <div class="section-line"></div>
+    <div class="hobbies-grid">
+
+      <div class="hobby-card">
+        <div class="hobby-icon">💻</div>
+        <h3>Competitive Programming</h3>
+        <p>Solving algorithmic challenges on Codeforces and LeetCode to sharpen my problem-solving skills.</p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">📸</div>
+        <h3>Photography</h3>
+        <p>Capturing everyday moments through a lens — especially nature, street, and architectural shots.</p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">📚</div>
+        <h3>Reading</h3>
+        <p>Exploring science fiction and technology books — currently reading "The Martian" by Andy Weir.</p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">✏️</div>
+        <h3>Sketching</h3>
+        <p>Creating pencil sketches of portraits and landscapes as a creative outlet in my free time.</p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">🎵</div>
+        <h3>Music</h3>
+        <p>Playing the guitar and listening to Carnatic classical music and indie rock in my spare time.</p>
+      </div>
+
+      <div class="hobby-card">
+        <div class="hobby-icon">♟️</div>
+        <h3>Chess</h3>
+        <p>Playing chess online and at local clubs — it keeps my strategic thinking sharp and focused.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================
+       CONTACT
+       =================================================== -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="section-line"></div>
+    <p class="contact-intro">
+      I'm open to internship opportunities, collaborations, and interesting conversations.
+      Feel free to reach out!
+    </p>
+    <div class="contact-links">
+      <a class="contact-btn" href="mailto:yourname@email.com">📧 Email Me</a>
+      <a class="contact-btn btn-outline" href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+      <a class="contact-btn btn-outline" href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+    </div>
+  </section>
+
+  <!-- ===================================================
+       FOOTER
+       =================================================== -->
+  <footer class="footer">
+    <p>&copy; 2024 Your Full Name. Built with HTML &amp; CSS. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
