@@ -1,0 +1,493 @@
+/* ===================================================
+   RESET & BASE
+   =================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy:       #1a365d;
+  --blue:       #2b6cb0;
+  --blue-light: #bee3f8;
+  --blue-pale:  #ebf8ff;
+  --sky-text:   #90cdf4;
+  --dark:       #2d3748;
+  --mid:        #718096;
+  --light:      #f7fafc;
+  --white:      #ffffff;
+  --border:     #e2e8f0;
+  --alt-bg:     #edf2f7;
+  --green-bg:   #f0fff4;
+  --green-text: #276749;
+  --green-bdr:  #c6f6d5;
+  --radius:     10px;
+  --shadow:     0 2px 14px rgba(0,0,0,0.08);
+  --font:       'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  color: var(--dark);
+  background: var(--light);
+  line-height: 1.65;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===================================================
+   HEADER
+   =================================================== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--white);
+  border-bottom: 4px solid var(--navy);
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow);
+}
+
+.full-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-size: 0.93rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+.details-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.details-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+}
+
+.label {
+  font-weight: 700;
+  color: var(--blue);
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.value { color: var(--mid); }
+
+/* Photo */
+.header-photo { flex-shrink: 0; }
+
+.passport-photo {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 3px solid var(--blue);
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+.photo-placeholder {
+  display: none;
+  width: 130px;
+  height: 160px;
+  border-radius: var(--radius);
+  border: 3px dashed var(--border);
+  background: var(--alt-bg);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--mid);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ===================================================
+   SECTIONS — SHARED
+   =================================================== */
+.section {
+  padding: 3.5rem 3rem;
+  background: var(--white);
+}
+.section-alt { background: var(--alt-bg); }
+
+.section-title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.section-line {
+  width: 48px;
+  height: 4px;
+  background: var(--blue);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+/* ===================================================
+   ABOUT
+   =================================================== */
+.about-text {
+  max-width: 760px;
+  color: var(--mid);
+  font-size: 1.03rem;
+  line-height: 1.85;
+}
+
+/* ===================================================
+   EDUCATION — TIMELINE
+   =================================================== */
+.timeline {
+  position: relative;
+  padding-left: 2.25rem;
+  max-width: 720px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--blue-light);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -2.25rem;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+.timeline-content {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.timeline-sub {
+  font-size: 0.88rem;
+  color: var(--blue);
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.timeline-place {
+  font-size: 0.88rem;
+  color: var(--mid);
+  margin-top: 2px;
+}
+
+.timeline-year {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  background: var(--blue-pale);
+  color: var(--blue);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+/* ===================================================
+   SKILLS
+   =================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-category {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.skill-cat-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 0.75rem;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-tag {
+  background: var(--blue-pale);
+  color: var(--blue);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--blue-light);
+}
+
+/* ===================================================
+   ACHIEVEMENTS
+   =================================================== */
+.achievements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 760px;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+  font-size: 0.93rem;
+  color: var(--mid);
+}
+
+.ach-icon { font-size: 1.3rem; flex-shrink: 0; }
+.achievement-item strong { color: var(--navy); }
+
+/* ===================================================
+   HOBBIES & INTERESTS
+   =================================================== */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.hobby-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(43, 108, 176, 0.12);
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hobby-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  margin-bottom: 8px;
+}
+
+.hobby-card p {
+  font-size: 0.88rem;
+  color: #718096;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===================================================
+   CERTIFICATIONS
+   =================================================== */
+.cert-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.cert-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+.cert-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  color: var(--mid);
+}
+
+/* Placeholder note */
+.placeholder-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #b7791f;
+  background: #fffbeb;
+  border: 1px solid #f6e05e;
+  border-radius: 6px;
+  padding: 8px 14px;
+  max-width: 560px;
+}
+
+/* ===================================================
+   CONTACT
+   =================================================== */
+.contact-intro {
+  font-size: 1rem;
+  color: var(--mid);
+  margin-bottom: 1.5rem;
+  max-width: 560px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.93rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.contact-btn:hover {
+  background: var(--blue);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.contact-btn.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+
+.contact-btn.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* ===================================================
+   FOOTER
+   =================================================== */
+.footer {
+  text-align: center;
+  padding: 24px 16px;
+  background: #1a365d;
+  color: #90cdf4;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* ===================================================
+   RESPONSIVE — small screens
+   =================================================== */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px 24px;
+    text-align: center;
+  }
+
+  .full-name { font-size: 1.7rem; }
+
+  .details-list li {
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+  }
+
+  .label { min-width: unset; }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section,
+  .section-alt {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
